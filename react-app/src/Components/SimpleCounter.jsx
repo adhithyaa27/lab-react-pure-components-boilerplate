@@ -24,15 +24,15 @@ class SimpleCounter extends Component {
 
     render() {
         console.log('This is Simple Component');
-        const buttonStyle = {backgroundColor: this.state.toggle ? 'green' : 'red',};
+        const buttonStyle = {backgroundColor: this.state.toggle ? 'blue' : 'black',};
         const incrementButtonStyle = {cursor: this.state.toggle ? "pointer" : "not-allowed"}
 
     return (
         <>
-            <h2>SimpleCounter</h2>
-            <p>Counter : {this.state.counter}</p>
-            <button onClick={this.handleIncrement} disabled={!this.state.toggle} style={incrementButtonStyle}>Increment</button>
-            <button onClick={this.handleToggle} style={buttonStyle}>Set Toggle</button>
+            <div id='SC'>SIMPLE COUNTER</div>
+            <p id='counter1'>COUNTER : {this.state.counter}</p>
+            <button id="increment1" onClick={this.handleIncrement} disabled={!this.state.toggle} style={incrementButtonStyle}>INCREMENT</button>
+            <button id="settoggle1" onClick={this.handleToggle} style={buttonStyle}>SET TOGGLE</button>
         </>
     );
 }

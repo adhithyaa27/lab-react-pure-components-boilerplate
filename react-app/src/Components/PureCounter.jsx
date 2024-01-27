@@ -19,16 +19,21 @@ class PureCounter extends PureComponent {
         }))
     }
     render() {
-        console.log("This is Pure Component")
-        const buttonStyle = {backgroundColor: this.state.toggle ? 'green' : 'red',};
+        console.log("This Is Pure Component")
+
+        const buttonStyle = {backgroundColor: this.state.toggle ? 'blue' : 'black',};
+
         const incrementButtonStyle = {cursor: this.state.toggle ? "pointer" : "not-allowed"}
 
         return (
         <>
-            <h2>PureCounter</h2>
-            <p>Counter : {this.state.counter}</p>
-            <button onClick={this.handleIncrement} disabled={!this.state.toggle} style={incrementButtonStyle}>Increment</button>
-            <button onClick={this.handleToggle} style={buttonStyle}>Set Toggle</button>
+            <div id='PC'>PURE COUNTER</div>
+            
+            <p id='counter2'>COUNTER : {this.state.counter}</p>
+
+            <button id="increment2" onClick={this.handleIncrement} disabled={!this.state.toggle} style={incrementButtonStyle}>INCREMENT</button>
+            
+            <button id="settoggle2" onClick={this.handleToggle} style={buttonStyle}>SET TOOGLE</button>
         </>
         )
     }
